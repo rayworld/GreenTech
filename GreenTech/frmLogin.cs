@@ -25,6 +25,7 @@ namespace GreenTech
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            this.EnableGlass = false;
             styleManager1.ManagerStyle = (eStyle)Enum.Parse(typeof(eStyle), ConfigHelper.ReadValueByKey(ConfigHelper.ConfigurationFile.AppConfig, "FormStyle"));
             //this.DialogResult = System.Windows.Forms.DialogResult.OK;
             //this.Close();
