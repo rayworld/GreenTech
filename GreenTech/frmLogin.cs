@@ -36,5 +36,10 @@ namespace GreenTech
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Close();
         }
+
+        private void labelX2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
