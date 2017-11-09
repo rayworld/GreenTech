@@ -12,7 +12,7 @@ using DevComponents.DotNetBar.Controls;
 using Ray.Framework.Config;
 using Ray.Framework.Utilities;
 
-namespace GreenTech
+namespace HuaLiQin
 {
     public partial class frmMain : Office2007Form
     {
@@ -24,10 +24,10 @@ namespace GreenTech
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //设置应用标题
             this.ribbonControl1.TitleText = ConfigHelper.ReadValueByKey(ConfigHelper.ConfigurationFile.AppConfig, "AppName");
-            this.styleManager1.ManagerStyle = (eStyle)Enum.Parse(typeof(eStyle), ConfigHelper.ReadValueByKey(ConfigHelper.ConfigurationFile.AppConfig, "FormStyle"));
-            //NavTabControl.Tabs.Clear();
-
+            //获取窗口样式
+            getStyleSetting();
             frmLogin login = new frmLogin();
             if (login.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -36,8 +36,6 @@ namespace GreenTech
             {
                 this.Close();
             }
-
-
         }
 
         private void AppCommandTheme_Executed(object sender, EventArgs e)
@@ -116,6 +114,22 @@ namespace GreenTech
             ConfigHelper.UpdateOrCreateAppSetting(ConfigHelper.ConfigurationFile.AppConfig, "FormStyle", source.CommandParameter.ToString());
         }
 
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            SetMdiForm("导入收货通知单", typeof(frmImport));
+        }
+
+        private void buttonItem15_Click(object sender, EventArgs e)
+        {
+            SetMdiForm("导出EDI数据", typeof(frmExport));
+        }
+
+        private void buttonItem16_Click(object sender, EventArgs e)
+        {
+            SetMdiForm("确认到货通知", typeof(frmPOAcception));
+        }
+
         #endregion
 
         #region 私有过程
@@ -165,10 +179,22 @@ namespace GreenTech
             }
         }
 
+        private void getStyleSetting(){
+            this.styleManager1.ManagerStyle = (eStyle)Enum.Parse(typeof(eStyle), ConfigHelper.ReadValueByKey(ConfigHelper.ConfigurationFile.AppConfig, "FormStyle"));
+            string managerStyle = this.styleManager1.ManagerStyle .ToString();
+            for (int i = 0; i < buttonItem1.SubItems.Count -1; i++)
+            {
+                if (managerStyle is string && managerStyle == buttonItem1.SubItems[i].CommandParameter.ToString())
+                {
+                    ButtonItem bi = (ButtonItem)buttonItem1.SubItems[i];
+                    bi.Checked = true;
+                }
+            }
+
+        }
+
 
         #endregion
-
-
 
     }
 }

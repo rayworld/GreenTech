@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenTech", "GreenTech\GreenTech.csproj", "{B7872A5A-2C72-49CE-9483-E853B740BBF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuaLiQin", "HuaLiQin\HuaLiQin.csproj", "{96798B0B-0272-440C-BD1A-DA87C8BAB39F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B7872A5A-2C72-49CE-9483-E853B740BBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7872A5A-2C72-49CE-9483-E853B740BBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7872A5A-2C72-49CE-9483-E853B740BBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7872A5A-2C72-49CE-9483-E853B740BBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96798B0B-0272-440C-BD1A-DA87C8BAB39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96798B0B-0272-440C-BD1A-DA87C8BAB39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96798B0B-0272-440C-BD1A-DA87C8BAB39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96798B0B-0272-440C-BD1A-DA87C8BAB39F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
