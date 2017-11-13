@@ -52,13 +52,13 @@ namespace HuaLiQin
             if( retval > 0)
             {
                 //MessageBox.Show("确认成功 " + retval + " 单！");
-                DesktopAlert.Show("<H2>" + "确认成功 " + retval + " 单！" + "</H2>");
+                DesktopAlert.Show("<h2>" + "确认成功 " + retval + " 单！" + "</h2>");
 
             }
             else
             {
                 //MessageBox.Show("确认失败！");
-                DesktopAlert.Show("<H2>" + "确认失败！" + "</H2>");
+                DesktopAlert.Show("<h2>" + "确认失败！" + "</h2>");
             }
         }
         #endregion
